@@ -1,0 +1,17 @@
+
+server:
+  port: 8080
+  servlet:
+    contextPath: /first-application
+spring:
+  profiles:
+    active: local
+---
+spring:
+  application:
+    name: first-application
+  profiles: local
+  cloud:
+    bus: enabled
+    config:
+      uri: http://localhost:8888
